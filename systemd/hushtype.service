@@ -1,0 +1,22 @@
+# Runs HushType in the desktop session (hotkey + "Alisha, type" voice trigger).
+# Install: copy to ~/.config/systemd/user/ then: systemctl --user enable --now hushtype
+# HushType (formerly LocalFlow): offline push-to-talk dictation. "localflow" still works as an alias.
+[Unit]
+Description=HushType offline dictation (hold Right Ctrl, or say "Alisha, type")
+After=graphical-session.target pipewire.service pipewire-pulse.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=%h/.Xauthority
+Environment=PYTHONUNBUFFERED=1
+WorkingDirectory=%h/Documents/HushType/hushtype
+ExecStart=%h/Documents/HushType/hushtype/.venv/bin/python %h/Documents/HushType/hushtype/hushtype.py
+# X / the mic may not be ready right at login; keep retrying
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+Alias=localflow.service

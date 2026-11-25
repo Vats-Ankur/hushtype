@@ -1,0 +1,10 @@
+# Cloned and built by setup.sh
+whisper.cpp/
+# Python
+.venv/
+__pycache__/
+# Personal voice recordings used for testing
+samples/
+*.wav
+# Local backups
+*.bak*

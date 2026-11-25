@@ -1,0 +1,36 @@
+# HushType settings. Restart hushtype after editing: systemctl --user restart hushtype
+
+[hotkey]
+key = "ctrl_r"        # any pynput key name: ctrl_r, alt_r, f9, pause, scroll_lock ...
+mode = "hold"         # "hold" = talk while held (Wispr style); "toggle" = press to start/stop
+
+[whisper]
+model = "whisper.cpp/models/ggml-base.en.bin"   # small.en = more accurate, ~3x slower
+server_bin = "whisper.cpp/build/bin/whisper-server"
+port = 8178
+threads = 4
+language = "en"
+prompt = ""           # optional hint text, e.g. names you say often
+
+[output]
+method = "type"       # "type" = xdotool typing; "paste" = clipboard + Ctrl+V (faster for long text)
+add_trailing_space = true
+notify = true         # desktop notifications on start/stop
+sounds = true         # short beep on start/stop
+silence_threshold = 200   # recordings quieter than this are ignored (mic noise floor ~90)
+end_silence = 1.2         # "Alisha, type": stop after this many seconds of pause
+
+[llm]
+# Optional AI polish via a LOCAL OpenAI-compatible server (Ollama, llama.cpp server).
+enabled = false
+url = "http://127.0.0.1:11434/v1/chat/completions"
+model = "qwen2.5:1.5b"
+
+# Spoken phrase -> what to type. Case-insensitive, whole words.
+[dictionary]
+"cloud code" = "Claude Code"
+"get hub" = "GitHub"
+"kali linux" = "Kali Linux"
+"aleesha" = "Alisha"
+"alesha" = "Alisha"
+"a lisha" = "Alisha"

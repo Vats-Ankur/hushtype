@@ -1,0 +1,17 @@
+HushType — Speak it. It types. Nothing leaves your machine.
+Copyright 2026 Ankur Vats (@Vats-Ankur)
+Official repository: https://github.com/Vats-Ankur/hushtype
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+Any redistribution, modified or not, must keep this NOTICE file and credit the
+original author as required by Section 4(d) of the license.
+
+PROJECT NAME
+"HushType" is the name of this project and its author. As stated in Section 6 of
+the Apache License, no permission is granted to use it. Modified versions must
+use a different name and must not suggest that they are the official project or
+are endorsed by the author.
+
+THIRD-PARTY COMPONENTS (not included; installed separately, each under its own license)
+- whisper.cpp and its Whisper models (MIT), cloned and built by setup.sh.
+- pynput (LGPL-3.0), xdotool, notify-send and other system tools.
