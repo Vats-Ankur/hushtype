@@ -103,15 +103,11 @@ The Whisper server listens on `127.0.0.1:8178` only, so companion apps on the sa
 
 ## `> HOW IT WORKS`
 
-```mermaid
-flowchart LR
-  K["hotkey / socket"] --> R["record mic (16 kHz)"]
-  R --> W["whisper.cpp server<br/>127.0.0.1 only"]
-  W --> C["cleanup.py<br/>fillers · corrections · dictionary"]
-  C --> L{"local LLM?<br/>(optional)"}
-  L --> T["xdotool type / paste"]
-  T --> A["focused app"]
-```
+<p align="center">
+  <a href="docs/architecture.svg"><img src="docs/architecture.png" alt="HushType architecture board: trigger, capture, transcribe, clean, polish, output" width="100%"></a>
+</p>
+
+<p align="center"><sub>Whiteboard-style architecture board. Numbered connectors follow one request end to end. Click it for the full-size, editable SVG; regenerate it with <code>make_architecture.py in the ALISHA repo</code>.</sub></p>
 
 ## `> PROJECT FILES`
 
