@@ -104,10 +104,10 @@ The Whisper server listens on `127.0.0.1:8178` only, so companion apps on the sa
 ## `> HOW IT WORKS`
 
 <p align="center">
-  <a href="docs/architecture.svg"><img src="docs/architecture.png" alt="HushType architecture board: trigger, capture, transcribe, clean, polish, output" width="100%"></a>
+  <a href="https://raw.githubusercontent.com/Vats-Ankur/hushtype/master/docs/architecture.png"><img src="docs/architecture.png" alt="HushType architecture board: trigger, capture, transcribe, clean, polish, output" width="100%"></a>
 </p>
 
-<p align="center"><sub>Whiteboard-style architecture board. Numbered connectors follow one request end to end. Click it for the full-size, editable SVG; regenerate it with <code>make_architecture.py in the ALISHA repo</code>.</sub></p>
+<p align="center"><sub>Whiteboard-style architecture board: numbered connectors follow one request end to end.<br><b>🔍 <a href="https://raw.githubusercontent.com/Vats-Ankur/hushtype/master/docs/architecture.png">Open full size</a></b> (opens the image on its own; click or pinch to zoom) · <a href="docs/architecture.svg">editable SVG</a></sub></p>
 
 ## `> PROJECT FILES`
 
